@@ -1,18 +1,13 @@
 from fastapi import APIRouter
-from pydantic import BaseModel, Field
 from typing import Annotated
 from fastapi import Body
+
+from app.models.client_model import Client
 
 router = APIRouter(
     prefix='/predict',
     tags=['predict'],
 )
-
-
-class Client(BaseModel):
-    days: Annotated[int | None, Field()]
-    internet_service: bool
-    phone_service: bool
 
 
 @router.post('/binary', response_model=list[Client])
