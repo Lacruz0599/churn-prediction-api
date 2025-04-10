@@ -1,21 +1,15 @@
-from enum import Enum
 from fastapi import APIRouter
 from typing import Annotated
 from fastapi import Body
 
 from app.controllers.predict_controllers import predict_instance_controller, predict_list_controller
 from app.models.client_model import Client
+from app.custom_types.model_method import ModelMethod
 
 router = APIRouter(
     prefix='/predict',
     tags=['predict'],
 )
-
-
-class ModelMethod(str, Enum):
-    binary = 'binary'
-    proba = 'proba'
-    scores = 'scores'
 
 
 @router.post('/list/{method}', response_model=list[Client])
@@ -35,4 +29,4 @@ def predict_instance_routh(
         Client,
         Body()]
 ):
-    return predict_instance_routh(method, client)
+    return predict_instance_controller(method, client)
