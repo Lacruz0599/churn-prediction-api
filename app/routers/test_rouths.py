@@ -4,7 +4,7 @@ from fastapi import Body
 
 
 from app.custom_types.model_evaluation_metric import ModelEvaluationMetric
-from app.models.client_model import Client
+from app.models.client_input_model import ClientInput
 
 router = APIRouter(
     prefix='/test-model',
@@ -16,7 +16,7 @@ router = APIRouter(
 def evaluate(
     method: ModelEvaluationMetric,
     clients: Annotated[
-        list[Client],
+        list[ClientInput],
         Body()]
 ):
     pass

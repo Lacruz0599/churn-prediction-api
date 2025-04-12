@@ -1,5 +1,8 @@
 
 
+from app.models.client_input_model import ClientInput
+
+
 class ModelX():
 
     def predict(x):
@@ -14,4 +17,12 @@ class ModelX():
 
 model = ModelX()
 
-# def predict_binary( x, y):
+
+def model_predict_list(clients: list[ClientInput]):
+
+    for client in clients:
+        client.model_dump.values
+
+
+def model_predict_instance(client: ClientInput):
+    return

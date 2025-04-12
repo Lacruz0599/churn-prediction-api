@@ -1,10 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Query, Body
 from typing import Annotated
-from fastapi import Body
 
 from app.controllers.predict_controllers import predict_instance_controller, predict_list_controller
-from app.models.client_model import Client
+from app.models.client_input_model import ClientInput
+from app.models.client_prediction_model import ClientPrediction
 from app.custom_types.model_method import ModelMethod
+from app.models.response_prediction_model import ResponsePrediction
 
 router = APIRouter(
     prefix='/predict',
@@ -12,21 +13,24 @@ router = APIRouter(
 )
 
 
-@router.post('/list/{method}', response_model=list[Client])
+@router.post('/list', response_model=ResponsePrediction)
 def predict_list_routh(
-    method: ModelMethod,
     clients: Annotated[
-        list[Client],
-        Body()]
+        list[ClientInput],
+        Body(embed=True, )],
+
+    treshold: Annotated[
+        float,
+        Query()] = .5,
 ):
-    return predict_list_controller(method, clients)
+    return predict_list_controller(clients, treshold)
 
 
-@router.post('/instance/{method}', response_model=Client)
+@router.post('/instance/{method}', response_model=ClientPrediction)
 def predict_instance_routh(
     method: ModelMethod,
     client: Annotated[
-        Client,
+        ClientInput,
         Body()]
 ):
     return predict_instance_controller(method, client)
