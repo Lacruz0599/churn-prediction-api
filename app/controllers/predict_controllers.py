@@ -1,5 +1,4 @@
 from app.models.client_input_model import ClientInput
-from app.custom_types.model_method import ModelMethod
 from app.models.client_prediction_model import ClientPrediction
 from app.models.response_prediction_model import ResponsePrediction
 
@@ -15,9 +14,3 @@ def predict_list_controller(
 
         response = ResponsePrediction(predictions=predictions)
     return response
-
-
-def predict_instance_controller(
-    method: ModelMethod,
-    client: ClientInput
-): return ClientInput
