@@ -19,6 +19,9 @@ def predict_list_routh(
 
     treshold: Annotated[
         float,
-        Query()] = .5,
+        Query(
+            ge=0,
+            le=1,
+        )] = .5,
 ):
     return predict_list_controller(clients, treshold)

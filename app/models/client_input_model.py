@@ -5,7 +5,19 @@ from pydantic import BaseModel, Field
 
 
 class ClientInput(BaseModel):
-    days: Annotated[int | None, Field()]
-    is_month_to_month: Annotated[int | None, Field()]
-    is_optical_fiber: Annotated[int | None, Field()]
-    internet: Annotated[int | None, Field()]
+    days: Annotated[int | None, Field(
+        ge=0,
+        le=10000,
+    )]
+    is_month_to_month: Annotated[int | None, Field(
+        ge=0,
+        le=1,
+    )]
+    is_optical_fiber: Annotated[int | None, Field(
+        ge=0,
+        le=1,
+    )]
+    internet: Annotated[int | None, Field(
+        ge=0,
+        le=1,
+    )]
