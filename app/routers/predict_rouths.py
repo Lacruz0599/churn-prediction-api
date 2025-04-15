@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query, Body
 from typing import Annotated
 
-from app.controllers.predict_controllers import predict_instance_controller, predict_list_controller
+from app.controllers.predict_controllers import predict_list_controller
 from app.models.client_input_model import ClientInput
 from app.models.response_prediction_model import ResponsePrediction
 
