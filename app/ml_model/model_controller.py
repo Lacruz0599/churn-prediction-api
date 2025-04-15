@@ -10,7 +10,7 @@ class ModelX():
         return [1]
 
     def predict_proba(x):
-        return [.5]
+        return [[.5, .5]]
 
     def score(x, y):
         return .1
