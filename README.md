@@ -93,7 +93,7 @@ Content-Type: application/json
 
 ## 🔗 Enlaces Relacionados
 
--  **App Web del modelo**: [Repositorio de la app]([https://github.com/Lacruz0599/churn-prediction-api](https://github.com/Lacruz0599/Churn-Predictor-Web-App))
+-  **App Web del modelo**: [Repositorio de la app](https://github.com/Lacruz0599/Churn-Predictor-Web-App)
 -  **Modelo de Ml usado en la api**: [Predicción De Abandono De Clientes Telecom](https://github.com/Lacruz0599/prediccion-de-abandono-de-clientes-Telecom)
 
 
