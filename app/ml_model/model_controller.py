@@ -1,27 +1,16 @@
 
+import joblib
 
 from app.models.client_input_model import ClientInput
 from app.models.client_prediction_model import ClientPrediction
 
 
-class ModelX():
-
-    def predict(x):
-        return [1]
-
-    def predict_proba(x):
-        return [[.5, .5]]
-
-    def score(x, y):
-        return .1
-
-
-model = ModelX()
+model = joblib.load("ml_model/model_churn.pkl")
 
 
 def predict_client(client: ClientInput, treshold: float):
-    prediction = model.predict_proba(client)
+    prediction = model.predict_proba([list(client.model_dump().values())])
 
-    probabilty = prediction[0][1]
+    probabilty = prediction[:, 1][0]
     prediction = int(probabilty >= treshold)
     return ClientPrediction(probability=probabilty, prediction=prediction)

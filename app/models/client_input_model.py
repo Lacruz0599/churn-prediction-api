@@ -17,6 +17,10 @@ class ClientInput(BaseModel):
         ge=0,
         le=1,
     )]
+    is_electronic_check: Annotated[int | None, Field(
+        ge=0,
+        le=1,
+    )]
     internet: Annotated[int | None, Field(
         ge=0,
         le=1,
