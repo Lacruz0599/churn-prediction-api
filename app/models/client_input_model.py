@@ -13,7 +13,7 @@ class ClientInput(BaseModel):
         ge=0,
         le=1,
     )]
-    is_optical_fiber: Annotated[int | None, Field(
+    is_fiber_optic: Annotated[int | None, Field(
         ge=0,
         le=1,
     )]
