@@ -6,7 +6,7 @@ from app.models.client_input_model import ClientInput
 from app.models.client_prediction_model import ClientPrediction
 
 
-model = joblib.load("ml_model/model_churn.pkl")
+model = joblib.load("app/ml_model/model_churn.pkl")
 
 
 def predict_client(client: ClientInput, treshold: float):
