@@ -104,9 +104,3 @@ Content-Type: application/json
 César Eduardo Cruz Cabrera  
 📧 cesareduardocruzcabrera@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/cesar-eduardo-cruz-cabrera)
-
----
-
-Este proyecto es parte de mi portafolio como científico de datos en formación.  
-¡Gracias por visitar!
-```
