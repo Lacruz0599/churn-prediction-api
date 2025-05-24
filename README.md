@@ -1,10 +1,12 @@
 # 🧠 Churn Prediction API
 
-Una API desarrollada con FastAPI para predecir la probabilidad de que un cliente abandone un servicio (churn), utilizando un modelo de machine learning previamente entrenado.
+Esta API fue desarrollada con **FastAPI** y tiene como objetivo predecir la probabilidad de que un cliente abandone un servicio (churn), utilizando un modelo de machine learning previamente entrenado. Está diseñada para ofrecer respuestas rápidas y precisas, facilitando la toma de decisiones estratégicas basadas en datos.
 
 ## 📌 Objetivo
 
-Este servicio expone un modelo de clasificación que permite a aplicaciones web o sistemas externos enviar datos de clientes y obtener una predicción del riesgo de churn. Está pensado para integrarse fácilmente con tableros analíticos, apps web, u otros sistemas internos.
+El propósito de esta API es exponer un modelo de clasificación que evalúa el riesgo de churn a partir de datos específicos del cliente. Permite que **aplicaciones web**, **sistemas internos** o **tableros analíticos** envíen solicitudes con información relevante de clientes y reciban una predicción inmediata sobre su probabilidad de abandono.
+
+Esta solución está pensada para integrarse de forma sencilla en pipelines de datos o flujos de trabajo de análisis, contribuyendo a estrategias de **retención de clientes**, segmentación proactiva y optimización de campañas de fidelización.
 
 ## ⚙️ Tecnologías utilizadas
 
